@@ -4,7 +4,7 @@ _使用docker技术部署redis，使用run.sh脚本快速搭建redis集群测试
 ## 部署redis
 *创建redis镜像*
 ``` bash
-./run.sh build / docker build -t {image-name} .
+./run.sh build 或 docker build -t {image-name} .
 ```
 *运行redis容器*
 docker run -d -p {port}:6379 --name {container-name} {image-name}
