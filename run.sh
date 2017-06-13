@@ -25,6 +25,7 @@ hosts=(
 case $1 in
 "build")
 	docker build -t ${image_name} .
+	echo "build ${image_name} image"
 	;;
 "servers")
 	cluster=""
@@ -50,5 +51,6 @@ case $1 in
 	then
 		./redis-trib.rb create --replicas 1 $cluster
 	fi
+	echo "services $2 finish"
 	;;
 esac	
